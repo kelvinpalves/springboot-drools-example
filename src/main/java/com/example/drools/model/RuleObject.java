@@ -4,10 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 import lombok.AccessLevel;
 import lombok.Data;
+import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@ToString
 public class RuleObject {
 
     Map<String, Object> data;

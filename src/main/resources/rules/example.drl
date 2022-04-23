@@ -1,4 +1,5 @@
 import com.example.drools.model.*;
+global com.example.drools.model.global.Result result;
 
 dialect "mvel"
 
@@ -7,6 +8,7 @@ rule "Regra Nome"
         RuleObject(data['name'] == "Kelvin")
     then
         System.out.println("The name is Kelvin");
+        result.getRulesExecuted().add("Rule001");
 end
 
 rule "Regra Idade"
@@ -14,4 +16,5 @@ rule "Regra Idade"
         RuleObject(data['age'] > 25)
     then
         System.out.println("The age is greater than 25");
+        result.getRulesExecuted().add("Rule002");
 end
