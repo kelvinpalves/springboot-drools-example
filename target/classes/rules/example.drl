@@ -1,0 +1,17 @@
+import com.example.drools.model.*;
+
+dialect "mvel"
+
+rule "Regra Nome"
+    when
+        RuleObject(data['name'] == "Kelvin")
+    then
+        System.out.println("The name is Kelvin");
+end
+
+rule "Regra Idade"
+    when
+        RuleObject(data['age'] > 25)
+    then
+        System.out.println("The age is greater than 25");
+end
