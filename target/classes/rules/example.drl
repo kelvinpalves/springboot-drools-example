@@ -5,7 +5,7 @@ dialect "mvel"
 
 rule "Regra Nome"
     when
-        RuleObject(data['name'] == "Kelvin")
+        RuleObject(data['name'] == "Kelvin" || (data['name'] == "K" && data['name'] == "E"))
     then
         System.out.println("The name is Kelvin");
         result.getRulesExecuted().add("Rule001");
@@ -17,4 +17,12 @@ rule "Regra Idade"
     then
         System.out.println("The age is greater than 25");
         result.getRulesExecuted().add("Rule002");
+end
+
+rule "001 - Regra 001"
+	when
+		RuleObject(data['name'] == "Kelvin" || (data['name'] == "Pamela" && data['age'] >= 25))
+	then
+		result.addData("nameIsKelvinOrPamela", "true");
+		result.addData("ageIsGreaterOrEqualsThanTwentyFive", "true");
 end

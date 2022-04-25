@@ -27,6 +27,7 @@ public class DroolsConfig {
 
         if ( knowledgeBuilder.hasErrors() ) {
             log.error(knowledgeBuilder.getErrors().toString());
+            System.out.println(knowledgeBuilder.getErrors());
             throw new DroolsConfigException( "Unable to compile drl");
         }
 

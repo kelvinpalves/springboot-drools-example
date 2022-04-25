@@ -1,0 +1,42 @@
+{
+  "code": "001",
+  "name": "Expert System Test",
+  "rules": [{
+    "code": "001",
+    "name": "Regra 001",
+    "conditions": [
+      [{
+        "key": "name",
+        "value": "Kelvin",
+        "relationalOperator": "EQUALS",
+        "type": "TEXT",
+        "logicalOperator": "OR"
+      }],
+      [{
+        "key": "name",
+        "value": "Pamela",
+        "relationalOperator": "EQUALS",
+        "type": "TEXT",
+        "logicalOperator": "AND"
+      },
+        {
+          "key": "age",
+          "value": "25",
+          "relationalOperator": "GREATER_OR_EQUALS",
+          "type": "NUMBER"
+        }
+      ]
+    ],
+    "objectives": [{
+      "key": "nameIsKelvinOrPamela",
+      "value": "true",
+      "dataType": "TEXT"
+    },
+      {
+        "key": "ageIsGreaterOrEqualsThanTwentyFive",
+        "value": "true",
+        "dataType": "TEXT"
+      }
+    ]
+  }]
+}
